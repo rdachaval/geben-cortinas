@@ -386,7 +386,8 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
     .qf-grid-3{ grid-template-columns:1fr 1fr; }
     .qf-window{ padding:20px 16px; }
   }
-  .qf input[type=text], .qf input[type=tel], .qf input[type=number], .qf select, .qf textarea{
+  .qf-note{ display:block; color:var(--ink-soft); font-size:.78rem; margin-top:6px; }
+  .qf input[type=text], .qf input[type=tel], .qf input[type=email], .qf input[type=number], .qf select, .qf textarea{
     width:100%; padding:13px 14px; border:1.5px solid var(--line); border-radius:12px;
     font:inherit; font-size:1rem; background:#fff; color:var(--ink);
   }
@@ -628,8 +629,9 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
               <input type="text" id="qfNombre" name="nombre" autocomplete="name" maxlength="80" required>
             </div>
             <div>
-              <label class="qf-label" for="qfWhatsapp">WhatsApp <span class="qf-help">Con código de área, ej.: 11 2345 6789</span></label>
-              <input type="tel" id="qfWhatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="11 2345 6789" maxlength="30" required>
+              <label class="qf-label" for="qfWhatsapp">WhatsApp</label>
+              <input type="tel" id="qfWhatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="11 2345 6789" maxlength="30" aria-describedby="qfWhatsappNota" required>
+              <span class="qf-note" id="qfWhatsappNota">Con código de área, ej.: 11 2345 6789</span>
             </div>
             <div>
               <label class="qf-label" for="qfMail">Mail</label>
