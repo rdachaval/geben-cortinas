@@ -299,6 +299,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
   .showroom h2{ font-size:clamp(1.8rem,4vw,2.4rem); margin:14px 0 14px; }
   .showroom p{ color:var(--ink-soft); margin-bottom:12px; }
   .showroom .addr{ font-family:'Outfit',sans-serif; font-weight:600; font-size:1.15rem; color:var(--ink); }
+  .showroom .hours{ font-weight:600; color:var(--ink); }
   .showroom .btn{ margin-top:12px; }
   .map{ border-radius:22px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; background:var(--line); }
   .map iframe{ width:100%; height:100%; border:0; display:block; }
@@ -594,9 +595,9 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
         <h2>Vení a conocerlas</h2>
         <p>En nuestro showroom de Balboa tenemos todos los muestrarios: podés ver y tocar las telas, y mirarlas a contraluz para elegir cuánta luz dejan pasar.</p>
         <p class="addr">Balboa 371, La Paternal, CABA</p>
-        <p>Escribinos antes y te esperamos.</p>
+        <p class="hours">Lunes a viernes de 12 a 18 h · Sábados de 9 a 13 h</p>
         <a class="btn btn-primary" href="https://wa.me/5491125420046?text=Hola!%20Quiero%20ir%20al%20showroom%20a%20ver%20las%20cortinas" target="_blank" rel="noopener">Coordinar visita por WhatsApp</a>
-        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Balboa+371,+CABA,+Argentina" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn-outline" href="https://maps.google.com/?cid=4162656236535437477" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
       <div class="map reveal reveal-delay-1">
         <iframe src="https://www.google.com/maps?q=Balboa+371,+Ciudad+Aut%C3%B3noma+de+Buenos+Aires&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa del showroom de Balboa"></iframe>
@@ -746,7 +747,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
 <script>
   /* ===== Configuración del formulario ===== */
   // URL de la aplicación web de Apps Script (termina en /exec).
-  const ENDPOINT = '';
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzHFYWBnyT1WAy3lhZ64NO7-zUwp61oV-GzFgiybfFXwWTh0Ax4sQDis__ocO_neVA4/exec';
   // Conversión de Google Ads para el pedido de presupuesto (ej.: 'AW-781590286/AbCdEf'). Vacío = no se envía.
   const GOOGLE_ADS_PEDIDO = '';
 
