@@ -628,7 +628,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
               <input type="text" id="qfNombre" name="nombre" autocomplete="name" maxlength="80" required>
             </div>
             <div>
-              <label class="qf-label" for="qfWhatsapp">WhatsApp</label>
+              <label class="qf-label" for="qfWhatsapp">WhatsApp <span class="qf-help">Con código de área, ej.: 11 2345 6789</span></label>
               <input type="tel" id="qfWhatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="11 2345 6789" maxlength="30" required>
             </div>
             <div>
@@ -765,6 +765,28 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
               ayuda: 'Screen deja pasar la luz y se ve hacia afuera. Blackout oscurece.' },
   };
 
+  // Deja un celular argentino como 10 dígitos (código de área + número, sin 0 ni 15).
+  // Devuelve '' si no se puede.
+  function celularArgentino(texto) {
+    let d = String(texto || '').replace(/\D/g, '');
+    if (d.indexOf('54') === 0 && d.length >= 12) d = d.slice(2);
+    if (d.indexOf('9') === 0 && d.length === 11) d = d.slice(1);
+    if (d.indexOf('0') === 0) d = d.slice(1);
+    if (d.length === 8) d = '11' + d;                                  // sin código de área: CABA/GBA
+    if (d.length === 10 && d.indexOf('15') === 0) d = '11' + d.slice(2); // 15 xxxx xxxx
+    if (d.length === 12) {                                             // con el 15 después del código de área
+      for (const area of [2, 3, 4]) {
+        if (d.substr(area, 2) === '15') { d = d.slice(0, area) + d.slice(area + 2); break; }
+      }
+    }
+    return /^[1-9]\d{9}$/.test(d) ? d : '';
+  }
+  function celularLegible(d) {
+    return d.indexOf('11') === 0
+      ? '+54 9 11 ' + d.slice(2, 6) + '-' + d.slice(6)
+      : '+54 9 ' + d.slice(0, 3) + ' ' + d.slice(3, 6) + '-' + d.slice(6);
+  }
+
   (function(){
     const lista = document.getElementById('qfWindows');
     const tpl = document.getElementById('qfWindowTpl');
@@ -894,11 +916,12 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
       const mail = document.getElementById('qfMail');
       const zona = document.getElementById('qfZona');
       if (!nombre.value.trim()) return mostrarError('Falta tu nombre.', nombre);
-      if (wa.value.replace(/\D/g, '').length < 8) return mostrarError('Revisá el número de WhatsApp, con código de área.', wa);
+      const celular = celularArgentino(wa.value);
+      if (!celular) return mostrarError('Revisá el WhatsApp: código de área y número, por ejemplo 11 2345 6789.', wa);
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim())) return mostrarError('Revisá el mail.', mail);
       if (!zona.value.trim()) return mostrarError('Falta el barrio o la localidad.', zona);
       return {
-        nombre: nombre.value.trim(), whatsapp: wa.value.trim(), mail: mail.value.trim().toLowerCase(), zona: zona.value.trim(),
+        nombre: nombre.value.trim(), whatsapp: celular, mail: mail.value.trim().toLowerCase(), zona: zona.value.trim(),
         novedades: document.getElementById('qfNovedades').checked,
         comentarios: document.getElementById('qfComentarios').value.trim(),
         sitio: document.getElementById('qfSitio').value,
