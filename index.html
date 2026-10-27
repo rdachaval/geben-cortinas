@@ -436,7 +436,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow reveal in">Cortinas a medida · Instalación incluida hasta el 30/11</div>
+        <div class="eyebrow reveal in">Cortinas a medida · Instalación incluida en AMBA hasta el 30/11</div>
         <h1 class="reveal in">Vestí tus ventanas como se merece <em>tu casa</em></h1>
         <p class="lead reveal in reveal-delay-1">
           Cortinas Roller, Tradicionales y de Bandas Verticales, hechas a medida para cada ambiente.
@@ -534,7 +534,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
         <div class="step reveal">
           <div class="step-num">1</div>
           <h3>Contanos qué necesitás</h3>
-          <p>Completá el formulario con el tipo de cortina y las medidas de cada ventana. Si no las tenés, marcalo y lo vemos.</p>
+          <p>Completá el formulario con el tipo de cortina y las medidas de cada ventana. Si no las tenés y estás en AMBA, marcalo y vamos a medir.</p>
         </div>
         <div class="step reveal reveal-delay-1">
           <div class="step-num">2</div>
@@ -544,7 +544,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
         <div class="step reveal reveal-delay-2">
           <div class="step-num">3</div>
           <h3>Confeccionamos y colocamos</h3>
-          <p>Fabricamos tu cortina a medida y la instalamos. Hasta el 30/11, la instalación va incluida.</p>
+          <p>Fabricamos tu cortina a medida y, en AMBA, la instalamos. Hasta el 30/11, la instalación va incluida.</p>
         </div>
       </div>
     </div>
@@ -614,7 +614,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
         <div class="eyebrow">Presupuesto sin cargo</div>
         <h2>Pedí tu presupuesto</h2>
         <p>Una ventana por bloque. Si querés cortinas para varias ventanas, agregalas abajo.</p>
-        <p class="promo">🎁 <span>Aprovechá la <strong>instalación incluida</strong> por tiempo limitado, hasta el 30/11.</span></p>
+        <p class="promo">🎁 <span>Aprovechá la <strong>instalación incluida en AMBA</strong> por tiempo limitado, hasta el 30/11.</span></p>
       </div>
 
       <form class="qf" id="quoteForm" novalidate>
@@ -652,7 +652,7 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
               <textarea id="qfComentarios" name="comentarios" maxlength="1000"></textarea>
             </div>
           </div>
-          <label class="qf-check"><input type="checkbox" id="qfNovedades"> Quiero recibir novedades y promociones de Geben por mail</label>
+          <label class="qf-check"><input type="checkbox" id="qfNovedades" checked> Quiero recibir novedades y promociones de Geben por mail</label>
           <div class="qf-hp" aria-hidden="true">
             <label for="qfSitio">No completar</label>
             <input type="text" id="qfSitio" name="sitio" tabindex="-1" autocomplete="off">
@@ -695,11 +695,11 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
     <div class="qf-measures">
       <span class="qf-label">Medidas <span class="qf-help">Ancho: de lado a lado del hueco de la ventana. Alto: desde arriba del hueco hasta donde querés que llegue la cortina.</span></span>
       <div class="qf-grid">
-        <div class="qf-unit"><input type="number" class="qf-ancho" inputmode="numeric" min="20" max="1500" placeholder="Ancho" aria-label="Ancho en centímetros"></div>
-        <div class="qf-unit"><input type="number" class="qf-alto" inputmode="numeric" min="20" max="600" placeholder="Alto" aria-label="Alto en centímetros"></div>
+        <div class="qf-unit"><input type="text" class="qf-ancho" inputmode="decimal" maxlength="12" placeholder="Ancho" aria-label="Ancho en centímetros"></div>
+        <div class="qf-unit"><input type="text" class="qf-alto" inputmode="decimal" maxlength="12" placeholder="Alto" aria-label="Alto en centímetros"></div>
       </div>
     </div>
-    <label class="qf-check"><input type="checkbox" class="qf-medir"> No tengo las medidas, prefiero que vengan a medir</label>
+    <label class="qf-check"><input type="checkbox" class="qf-medir"> No tengo las medidas, prefiero que vengan a medir (solo AMBA)</label>
 
     <div class="qf-grid-3" style="margin-top:6px">
       <div>
@@ -806,6 +806,19 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
       });
     }
 
+    // Pasa la medida a centímetros: acepta 160, 160 cm, 1,60, 1.60 o 1,60 m.
+    // Un número menor a 20 se toma como metros.
+    function aCm(texto){
+      let t = String(texto).trim().toLowerCase().replace(/\s+/g, '');
+      let metros = false;
+      if (t.endsWith('cm')) t = t.slice(0, -2);
+      else if (t.endsWith('m')){ t = t.slice(0, -1); metros = true; }
+      t = t.replace(',', '.');
+      if (!/^\d+(\.\d+)?$/.test(t)) return NaN;
+      const n = parseFloat(t);
+      return Math.round(metros || n < 20 ? n * 100 : n);
+    }
+
     function agregarVentana(){
       const nodo = tpl.content.firstElementChild.cloneNode(true);
       const id = ++seq;
@@ -815,6 +828,10 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
         nodo.querySelector('.qf-measures').classList.toggle('off', e.target.checked);
         nodo.querySelectorAll('.qf-ancho, .qf-alto').forEach(i => { i.disabled = e.target.checked; });
       });
+      nodo.querySelectorAll('.qf-ancho, .qf-alto').forEach(i => i.addEventListener('blur', () => {
+        const cm = aCm(i.value);
+        if (cm > 0) i.value = cm;
+      }));
       nodo.querySelector('.qf-remove').addEventListener('click', () => { nodo.remove(); renumerar(); });
       lista.appendChild(nodo);
       renumerar();
@@ -901,15 +918,15 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
         const medir = v.querySelector('.qf-medir').checked;
         const ancho = v.querySelector('.qf-ancho'), alto = v.querySelector('.qf-alto');
         if (!medir){
-          const a = Number(ancho.value), h = Number(alto.value);
-          if (!(a >= 20 && a <= 1500)) return mostrarError(n + 'poné el ancho en centímetros (por ejemplo 160), o marcá que vengan a medir.', ancho);
-          if (!(h >= 20 && h <= 600)) return mostrarError(n + 'poné el alto en centímetros (por ejemplo 220), o marcá que vengan a medir.', alto);
+          const a = aCm(ancho.value), h = aCm(alto.value);
+          if (!(a >= 20 && a <= 1500)) return mostrarError(n + 'poné el ancho en centímetros (por ejemplo 160) o en metros (1,60), o marcá que vengan a medir.', ancho);
+          if (!(h >= 20 && h <= 600)) return mostrarError(n + 'poné el alto en centímetros (por ejemplo 220) o en metros (2,20), o marcá que vengan a medir.', alto);
         }
         const cant = v.querySelector('.qf-cantidad');
         if (!(Number(cant.value) >= 1 && Number(cant.value) <= 30)) return mostrarError(n + 'revisá la cantidad.', cant);
         ventanas.push({
           tipo: tipo.value, tela: tela.value, medir,
-          ancho: medir ? null : Number(ancho.value), alto: medir ? null : Number(alto.value),
+          ancho: medir ? null : aCm(ancho.value), alto: medir ? null : aCm(alto.value),
           cantidad: Number(cant.value), ambiente: v.querySelector('.qf-ambiente').value,
           color: v.querySelector('.qf-color').value.trim(),
         });
