@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cortinas a Medida | Geben Argentina</title>
+<meta name="description" content="Cortinas Roller, Tradicionales y de Bandas Verticales a medida. Pedí tu presupuesto sin cargo con las medidas de tus ventanas. Geben Argentina.">
+<link rel="icon" type="image/png" href="img/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Píxel de Meta -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1044210472455238');fbq('track','PageView');
+</script>
+<!-- Google (GA4 y Google Ads) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRJS5M1CET"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286');
+</script>
+
+<style>
+
+  :root{
+    --primary:#9B271C;
+    --primary-dark:#7A1E15;
+    --primary-light:#C23A2C;
+    --secondary:#305C7D;
+    --secondary-dark:#234459;
+    --ink:#211A18;
+    --ink-soft:#5B4F4C;
+    --cream:#FBF6F2;
+    --card:#FFFFFF;
+    --line:#EAE0DA;
+    --gold:#C9A24B;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    overflow-x:hidden;
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{font-family:'Outfit', sans-serif; font-weight:700; letter-spacing:-0.01em;}
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .container{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:16px 32px; border-radius:100px;
+    font-family:'Outfit', sans-serif; font-weight:600; font-size:1rem;
+    cursor:pointer; border:none; transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .btn-primary{
+    background:var(--primary);
+    color:#fff;
+    box-shadow:0 8px 24px rgba(155,39,28,.35);
+  }
+  .btn-primary:hover{ background:var(--primary-light); transform:translateY(-3px); box-shadow:0 12px 28px rgba(155,39,28,.45); }
+  .btn-outline{
+    background:transparent; color:var(--ink); border:1.5px solid var(--line);
+  }
+  .btn-outline:hover{ border-color:var(--secondary); color:var(--secondary); transform:translateY(-2px); }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(251,246,242,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, box-shadow .3s ease;
+  }
+  header.scrolled{ border-color:var(--line); box-shadow:0 4px 20px rgba(0,0,0,.04); }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px; max-width:1180px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Outfit', sans-serif; font-weight:800; font-size:1.4rem;
+    color:var(--primary); display:flex; align-items:center; gap:10px;
+  }
+  .logo-full-img{ height:40px; width:auto; display:block; }
+  .nav-cta{ display:none; }
+  @media(min-width:720px){ .nav-cta{ display:inline-flex; } }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:170px 0 110px;
+    background:
+      radial-gradient(1100px 550px at 85% -10%, rgba(48,92,125,.14), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(155,39,28,.10), transparent 55%),
+      var(--cream);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1fr; gap:56px; align-items:center;
+  }
+  @media(min-width:960px){ .hero-grid{ grid-template-columns:1.05fr .95fr; } }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; border:1px solid var(--line); color:var(--primary);
+    font-family:'Outfit',sans-serif; font-weight:600; font-size:.82rem;
+    padding:8px 16px; border-radius:100px; margin-bottom:22px;
+    letter-spacing:.02em;
+  }
+  .eyebrow::before{ content:''; width:7px; height:7px; border-radius:50%; background:var(--primary); display:inline-block;}
+  .hero h1{
+    font-size:clamp(2.3rem, 5vw, 3.6rem);
+    line-height:1.08;
+    color:var(--ink);
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(92deg, var(--primary) 0%, var(--primary-light) 60%, var(--gold) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.lead{
+    font-size:1.15rem; color:var(--ink-soft); max-width:520px; margin-bottom:36px;
+  }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+  .hero-note{ display:flex; align-items:center; gap:10px; margin-top:34px; color:var(--ink-soft); font-size:.92rem;}
+  .stars{ color:var(--gold); letter-spacing:2px; font-size:1rem; }
+
+  .hero-carousel{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 30px 70px rgba(48,92,125,.25);
+    background:var(--secondary-dark);
+  }
+  .carousel-track{
+    display:flex; height:100%;
+    overflow-x:auto; scroll-snap-type:x mandatory;
+    scrollbar-width:none; -ms-overflow-style:none;
+  }
+  .carousel-track::-webkit-scrollbar{ display:none; }
+  .carousel-slide{
+    flex:0 0 100%; width:100%; height:100%;
+    scroll-snap-align:start; position:relative;
+  }
+  .carousel-slide img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .slide-caption{
+    position:absolute; left:20px; bottom:20px; right:20px;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(6px);
+    border-radius:14px; padding:14px 18px;
+    display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+  }
+  .slide-caption strong{ font-family:'Outfit',sans-serif; font-size:1rem; color:var(--ink); }
+  .slide-caption span{ font-size:.82rem; color:var(--ink-soft); }
+  .carousel-arrow{
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:42px; height:42px; border-radius:50%; border:none;
+    background:rgba(255,255,255,.85); color:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:0 8px 18px rgba(0,0,0,.18);
+    transition:background .2s ease, transform .2s ease;
+    z-index:2;
+  }
+  .carousel-arrow:hover{ background:#fff; transform:translateY(-50%) scale(1.06); }
+  .carousel-arrow.prev{ left:14px; }
+  .carousel-arrow.next{ right:14px; }
+  .carousel-dots{
+    position:absolute; top:16px; left:0; right:0;
+    display:flex; justify-content:center; gap:8px; z-index:2;
+  }
+  .dot{
+    width:8px; height:8px; border-radius:50%; border:none;
+    background:rgba(255,255,255,.5); cursor:pointer; padding:0;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .dot.active{ background:#fff; transform:scale(1.3); }
+
+  /* ---------- reveal animation ---------- */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  .reveal-delay-1{ transition-delay:.08s; }
+  .reveal-delay-2{ transition-delay:.16s; }
+  .reveal-delay-3{ transition-delay:.24s; }
+
+  /* ---------- SECTION HEADS ---------- */
+  section{ padding:100px 0; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 60px; }
+  .section-head .eyebrow{ margin-bottom:16px; }
+  .section-head h2{ font-size:clamp(1.9rem, 3.6vw, 2.6rem); margin-bottom:16px; }
+  .section-head p{ color:var(--ink-soft); font-size:1.05rem; }
+
+  /* ---------- BENEFITS ---------- */
+  .benefits{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .benefit-grid{ display:grid; grid-template-columns:1fr; gap:28px; }
+  @media(min-width:720px){ .benefit-grid{ grid-template-columns:repeat(3,1fr); } }
+  .benefit-card{
+    background:var(--cream); border:1px solid var(--line); border-radius:20px;
+    padding:36px 30px; transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    position:relative; overflow:hidden;
+  }
+  .benefit-card::after{
+    content:''; position:absolute; inset:0; border-radius:20px; padding:1px;
+    background:linear-gradient(135deg, var(--primary), transparent 40%);
+    opacity:0; transition:opacity .35s ease;
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;
+  }
+  .benefit-card:hover{ transform:translateY(-8px); box-shadow:0 20px 40px rgba(33,26,24,.08); border-color:transparent;}
+  .benefit-card:hover::after{ opacity:1; }
+  .benefit-icon{
+    width:60px; height:60px; border-radius:16px;
+    background:linear-gradient(135deg, var(--primary), var(--primary-light));
+    display:flex; align-items:center; justify-content:center; color:#fff;
+    margin-bottom:22px;
+    box-shadow:0 10px 22px rgba(155,39,28,.28);
+  }
+  .benefit-card h3{ font-size:1.25rem; margin-bottom:10px; }
+  .benefit-card p{ color:var(--ink-soft); font-size:.97rem; }
+  .benefit-tag{
+    display:inline-block; margin-top:18px; font-size:.78rem; font-weight:600;
+    color:var(--secondary); background:rgba(48,92,125,.09);
+    padding:5px 12px; border-radius:100px; font-family:'Outfit',sans-serif;
+  }
+
+  /* ---------- HOW IT WORKS ---------- */
+  .steps{ position:relative; }
+  .steps-grid{ display:grid; grid-template-columns:1fr; gap:50px; position:relative; }
+  @media(min-width:860px){
+    .steps-grid{ grid-template-columns:repeat(3,1fr); }
+    .steps-grid::before{
+      content:''; position:absolute; top:34px; left:12%; right:12%; height:2px;
+      background:repeating-linear-gradient(90deg, var(--line) 0 10px, transparent 10px 20px);
+    }
+  }
+  .step{ text-align:center; position:relative; }
+  .step-num{
+    width:68px; height:68px; border-radius:50%; margin:0 auto 24px;
+    background:var(--card); border:2px solid var(--primary); color:var(--primary);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Outfit',sans-serif; font-weight:800; font-size:1.5rem;
+    position:relative; z-index:2;
+    box-shadow:0 8px 20px rgba(155,39,28,.15);
+  }
+  .step h3{ font-size:1.2rem; margin-bottom:10px; }
+  .step p{ color:var(--ink-soft); font-size:.95rem; max-width:280px; margin:0 auto; }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials{ background:var(--secondary-dark); color:#fff; position:relative; overflow:hidden;}
+  .testimonials::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(700px 400px at 90% 0%, rgba(255,255,255,.06), transparent 60%);
+  }
+  .testimonials .section-head p{ color:rgba(255,255,255,.7); }
+  .testimonials .section-head .eyebrow{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.15); color:#fff; }
+  .testimonials .section-head .eyebrow::before{ background:var(--gold); }
+  .t-grid{ display:grid; grid-template-columns:1fr; gap:26px; position:relative; z-index:1; }
+  @media(min-width:800px){ .t-grid{ grid-template-columns:repeat(3,1fr); } }
+  .t-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px; padding:32px 28px;
+    backdrop-filter:blur(6px);
+    transition:transform .35s ease, background .35s ease;
+  }
+  .t-card:hover{ transform:translateY(-6px); background:rgba(255,255,255,.1); }
+  .t-stars{ color:var(--gold); letter-spacing:3px; margin-bottom:16px; font-size:1rem; }
+  .t-card p.quote{ font-size:.98rem; color:rgba(255,255,255,.9); margin-bottom:24px; min-height:80px; }
+  .t-person{ display:flex; align-items:center; gap:12px; }
+  .t-avatar{
+    width:44px; height:44px; border-radius:50%;
+    background:linear-gradient(135deg, var(--gold), var(--primary-light));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Outfit',sans-serif; font-weight:700; color:#fff; font-size:.9rem;
+  }
+  .t-person strong{ font-family:'Outfit',sans-serif; font-size:.95rem; display:block; }
+  .t-person span{ font-size:.8rem; color:rgba(255,255,255,.6); }
+  .t-note{ text-align:center; margin-top:44px; color:rgba(255,255,255,.55); font-size:.85rem; position:relative; z-index:1;}
+
+  .t-card p.quote a{ color:#fff; }
+  .t-person span a{ color:rgba(255,255,255,.75); text-decoration:underline; }
+
+  /* ---------- PROMO Y SHOWROOM ---------- */
+  .promo{ display:inline-flex; align-items:center; gap:10px; margin-top:22px; padding:10px 16px; border-radius:14px;
+    background:rgba(201,162,75,.14); border:1px solid rgba(201,162,75,.45); color:var(--ink); font-size:.95rem; }
+  .promo strong{ color:var(--primary-dark); }
+  .showroom-grid{ display:grid; grid-template-columns:1fr; gap:30px; align-items:center; }
+  @media(min-width:860px){ .showroom-grid{ grid-template-columns:1fr 1.1fr; } }
+  .showroom h2{ font-size:clamp(1.8rem,4vw,2.4rem); margin:14px 0 14px; }
+  .showroom p{ color:var(--ink-soft); margin-bottom:12px; }
+  .showroom .addr{ font-family:'Outfit',sans-serif; font-weight:600; font-size:1.15rem; color:var(--ink); }
+  .showroom .btn{ margin-top:12px; }
+  .map{ border-radius:22px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; background:var(--line); }
+  .map iframe{ width:100%; height:100%; border:0; display:block; }
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(120deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius:32px; padding:64px 40px; text-align:center; color:#fff;
+    position:relative; overflow:hidden; margin:0 24px;
+    max-width:1132px; margin-left:auto; margin-right:auto;
+  }
+  .cta::before{
+    content:''; position:absolute; inset:0;
+    background:
+      radial-gradient(500px 260px at 10% 0%, rgba(255,255,255,.14), transparent 60%),
+      radial-gradient(500px 260px at 90% 100%, rgba(0,0,0,.12), transparent 60%);
+  }
+  .cta h2{ position:relative; font-size:clamp(1.8rem,4vw,2.5rem); margin-bottom:16px; }
+  .cta p{ position:relative; color:rgba(255,255,255,.88); max-width:520px; margin:0 auto 34px; font-size:1.05rem;}
+  .cta .btn-primary{ position:relative; background:#fff; color:var(--primary); box-shadow:0 10px 26px rgba(0,0,0,.25); }
+  .cta .btn-primary:hover{ background:var(--cream); }
+  .cta .whatsapp-icon{ display:inline-flex; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background:var(--ink); color:rgba(255,255,255,.75); padding:70px 0 30px; margin-top:100px;}
+  .footer-grid{ display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:50px;}
+  @media(min-width:760px){ .footer-grid{ grid-template-columns:1.3fr 1fr 1fr; } }
+  .footer-logo-img{ height:52px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1); opacity:.95; }
+  .footer-grid p{ font-size:.92rem; max-width:320px; line-height:1.7; }
+  .footer-col h4{ color:#fff; font-family:'Outfit',sans-serif; font-size:.95rem; margin-bottom:18px; letter-spacing:.02em;}
+  .footer-col a{ display:block; color:rgba(255,255,255,.65); font-size:.92rem; margin-bottom:12px; transition:color .2s ease;}
+  .footer-col a:hover{ color:var(--gold); }
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12); padding-top:26px;
+    display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center;
+    font-size:.82rem; color:rgba(255,255,255,.45);
+  }
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed; right:22px; bottom:22px; z-index:200;
+    width:60px; height:60px; border-radius:50%;
+    background:#25D366; color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 26px rgba(37,211,102,.45);
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{ box-shadow:0 10px 26px rgba(37,211,102,.45);} 50%{ box-shadow:0 10px 34px rgba(37,211,102,.7);} }
+
+
+  /* ================= FORMULARIO ================= */
+  .quote-form-section{ background:var(--card); border-top:1px solid var(--line); }
+  .qf{ max-width:860px; margin:0 auto; }
+  .qf-window{
+    background:var(--cream); border:1px solid var(--line); border-radius:22px;
+    padding:26px 24px; margin-bottom:22px; position:relative;
+  }
+  .qf-window h3{ font-size:1.15rem; margin-bottom:18px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .qf-remove{ background:none; border:none; color:var(--ink-soft); font-size:.9rem; cursor:pointer; text-decoration:underline; font-family:'Inter',sans-serif; }
+  .qf-label{ display:block; font-weight:600; font-size:.95rem; margin:18px 0 8px; }
+  .qf-window > .qf-label:first-of-type{ margin-top:0; }
+  .qf-measures{ margin-top:4px; }
+  .qf input[type=file]{ font:inherit; font-size:.9rem; }
+  .qf-help{ font-weight:400; color:var(--ink-soft); font-size:.85rem; display:block; margin-top:2px; }
+  .qf-types{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .qf-type{ position:relative; cursor:pointer; border:2px solid var(--line); border-radius:16px; overflow:hidden; background:#fff; transition:border-color .2s, box-shadow .2s; }
+  .qf-type img{ width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .qf-type span{ display:block; padding:9px 8px; text-align:center; font-family:'Outfit',sans-serif; font-weight:600; font-size:.92rem; }
+  .qf-type input{ position:absolute; opacity:0; pointer-events:none; }
+  .qf-type:has(input:checked){ border-color:var(--primary); box-shadow:0 6px 18px rgba(155,39,28,.18); }
+  .qf-type:has(input:focus-visible){ outline:3px solid var(--secondary); outline-offset:2px; }
+  .qf-chips{ display:flex; flex-wrap:wrap; gap:10px; }
+  .qf-chip{ cursor:pointer; }
+  .qf-chip input{ position:absolute; opacity:0; pointer-events:none; }
+  .qf-chip span{ display:inline-block; padding:10px 16px; border:2px solid var(--line); border-radius:100px; background:#fff; font-size:.93rem; transition:border-color .2s, background .2s; }
+  .qf-chip input:checked + span{ border-color:var(--primary); background:rgba(155,39,28,.06); color:var(--primary-dark); font-weight:600; }
+  .qf-chip input:focus-visible + span{ outline:3px solid var(--secondary); outline-offset:2px; }
+  .qf-tela-help{ color:var(--ink-soft); font-size:.85rem; margin-top:8px; }
+  .qf-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px 16px; }
+  .qf-grid-3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px 16px; }
+  @media(max-width:640px){
+    .qf-types{ gap:8px; }
+    .qf-type span{ font-size:.8rem; padding:7px 4px; }
+    .qf-grid-3{ grid-template-columns:1fr 1fr; }
+    .qf-window{ padding:20px 16px; }
+  }
+  .qf input[type=text], .qf input[type=tel], .qf input[type=number], .qf select, .qf textarea{
+    width:100%; padding:13px 14px; border:1.5px solid var(--line); border-radius:12px;
+    font:inherit; font-size:1rem; background:#fff; color:var(--ink);
+  }
+  .qf textarea{ min-height:90px; resize:vertical; }
+  .qf input:focus, .qf select:focus, .qf textarea:focus{ outline:none; border-color:var(--secondary); box-shadow:0 0 0 3px rgba(48,92,125,.15); }
+  .qf-unit{ position:relative; }
+  .qf-unit input{ padding-right:44px; }
+  .qf-unit::after{ content:'cm'; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--ink-soft); font-size:.9rem; pointer-events:none; }
+  .qf-check{ display:flex; gap:10px; align-items:flex-start; margin-top:12px; font-size:.93rem; cursor:pointer; }
+  .qf-check input{ margin-top:4px; width:18px; height:18px; accent-color:var(--primary); }
+  .qf-measures.off{ opacity:.45; }
+  .qf-add{ width:100%; justify-content:center; border:2px dashed var(--line); background:transparent; color:var(--primary); margin-bottom:34px; }
+  .qf-add:hover{ border-color:var(--primary); }
+  .qf-contact{ background:var(--cream); border:1px solid var(--line); border-radius:22px; padding:26px 24px; }
+  .qf-contact h3{ font-size:1.15rem; margin-bottom:18px; }
+  .qf-full{ grid-column:1/-1; }
+  .qf-error{ color:var(--primary-dark); background:rgba(155,39,28,.08); border-radius:12px; padding:12px 14px; margin-top:18px; font-size:.93rem; display:none; }
+  .qf-error.show{ display:block; }
+  .qf-field-error{ border-color:var(--primary) !important; }
+  .qf-submit{ width:100%; justify-content:center; margin-top:22px; font-size:1.05rem; }
+  .qf-submit[disabled]{ opacity:.6; cursor:wait; transform:none; }
+  .qf-privacy{ text-align:center; color:var(--ink-soft); font-size:.82rem; margin-top:12px; }
+  .qf-hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+  .qf-done{ display:none; text-align:center; background:var(--cream); border:1px solid var(--line); border-radius:22px; padding:44px 24px; }
+  .qf-done.show{ display:block; }
+  .qf-done h3{ font-size:1.6rem; margin-bottom:12px; }
+  .qf-done p{ color:var(--ink-soft); max-width:520px; margin:0 auto 24px; }
+  .qf-photo-name{ font-size:.85rem; color:var(--ink-soft); margin-top:6px; }
+  .wa-alt{ text-align:center; margin-top:30px; color:var(--ink-soft); font-size:.95rem; }
+  .wa-alt a{ color:var(--secondary); font-weight:600; text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="#top" class="logo"><img src="img/logo.png" alt="Geben" class="logo-full-img"></a>
+    <a class="btn btn-primary nav-cta" href="#cotizar">Pedir presupuesto</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow reveal in">Cortinas a medida · Instalación incluida hasta el 30/11</div>
+        <h1 class="reveal in">Vestí tus ventanas como se merece <em>tu casa</em></h1>
+        <p class="lead reveal in reveal-delay-1">
+          Cortinas Roller, Tradicionales y de Bandas Verticales, hechas a medida para cada ambiente.
+          Contanos las medidas de tus ventanas y te mandamos el presupuesto por WhatsApp.
+        </p>
+        <div class="hero-actions reveal in reveal-delay-2">
+          <a class="btn btn-primary" href="#cotizar">Pedir presupuesto sin cargo</a>
+          <a class="btn btn-outline" href="#beneficios">Ver tipos de cortinas</a>
+        </div>
+        <div class="hero-note reveal in reveal-delay-3">
+          <span class="stars">★★★★★</span> <a href="https://maps.google.com/?cid=6576605301294909939" target="_blank" rel="noopener">4,9 en Google · +680 reseñas de clientes</a>
+        </div>
+      </div>
+
+      <div class="hero-carousel reveal in reveal-delay-1">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="img/roller.jpg" alt="Cortina Roller instalada en living moderno">
+            <div class="slide-caption"><strong>Roller</strong><span>Tela screen, tejido natural</span></div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/tradicional.jpg" alt="Cortinas tradicionales con gasa y blackout en living" loading="lazy">
+            <div class="slide-caption"><strong>Tradicionales</strong><span>Blackout + gasa, a piso</span></div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/verticales.jpg" alt="Bandas verticales en ventanal de living con vista a la ciudad" loading="lazy">
+            <div class="slide-caption"><strong>Bandas Verticales</strong><span>Control de luz a gran escala</span></div>
+          </div>
+        </div>
+        <button class="carousel-arrow prev" id="carouselPrev" aria-label="Anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-arrow next" id="carouselNext" aria-label="Siguiente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots">
+          <button class="dot active" data-i="0" aria-label="Roller"></button>
+          <button class="dot" data-i="1" aria-label="Tradicionales"></button>
+          <button class="dot" data-i="2" aria-label="Bandas Verticales"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFICIOS ================= -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Nuestras líneas</div>
+        <h2>Tres estilos, un mismo estándar de calidad</h2>
+        <p>Elegí el sistema que mejor se adapta a tu ambiente. Todas nuestras cortinas se confeccionan a medida exacta.</p>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="3" rx="1.5"/><rect x="5.5" y="7" width="13" height="12" rx="1"/><line x1="12" y1="19" x2="12" y2="22"/><circle cx="12" cy="22.3" r=".6" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>Cortinas Roller</h3>
+          <p>Diseño minimalista, ideal para living, cocina y oficinas. En tela screen, blackout o doble (screen + blackout en la misma ventana).</p>
+          <span class="benefit-tag">Más elegida</span>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="4" x2="22" y2="4"/><path d="M5 4c0 5 3 6 3 10s-1 5-1 7"/><path d="M19 4c0 5-3 6-3 10s1 5 1 7"/><circle cx="7.3" cy="13.5" r="1" fill="currentColor" stroke="none"/><circle cx="16.7" cy="13.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>Cortinas Tradicionales</h3>
+          <p>Calidez y volumen para dormitorios y living. Solo gasa, o gasa + blackout para oscurecer, con riel.</p>
+          <span class="benefit-tag">Máximo confort</span>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="4" x2="22" y2="4"/><line x1="5.5" y1="4" x2="5.5" y2="21"/><line x1="10.5" y1="4" x2="9.8" y2="21"/><line x1="15.5" y1="4" x2="14.2" y2="21"/><line x1="20.5" y1="4" x2="18.6" y2="21"/></svg>
+          </div>
+          <h3>Bandas Verticales</h3>
+          <p>Control preciso de luz y privacidad para grandes ventanales y espacios de trabajo. En screen o blackout.</p>
+          <span class="benefit-tag">Uso comercial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMO FUNCIONA ================= -->
+  <section class="steps">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Cómo funciona</div>
+        <h2>Del presupuesto a la instalación, en 3 pasos</h2>
+        <p>Un proceso simple, acompañado por nuestro equipo de principio a fin.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>Contanos qué necesitás</h3>
+          <p>Completá el formulario con el tipo de cortina y las medidas de cada ventana. Si no las tenés, marcalo y lo vemos.</p>
+        </div>
+        <div class="step reveal reveal-delay-1">
+          <div class="step-num">2</div>
+          <h3>Te mandamos el presupuesto</h3>
+          <p>Nuestro equipo calcula el precio con tus medidas y te escribe por WhatsApp con las opciones de tela y color.</p>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step-num">3</div>
+          <h3>Confeccionamos y colocamos</h3>
+          <p>Fabricamos tu cortina a medida y la instalamos. Hasta el 30/11, la instalación va incluida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEÑAS ================= -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Reseñas en Google</div>
+        <h2>4,9 en Google, reseña a reseña</h2>
+        <p>Las cortinas son una línea nueva de Geben, así que estas reseñas hablan de nuestra atención y nuestras entregas.</p>
+      </div>
+
+      <div class="t-grid">
+        <div class="t-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="quote">"Me recibieron en el local Rodrigo y Gustavo, con muchísima amabilidad. Me explicaron y mostraron los diferentes modelos de sillones, tamaños, telas, facilidades de pago y tiempos de entrega."</p>
+          <div class="t-person">
+            <div class="t-avatar">VA</div>
+            <div><strong>Vane A.</strong><span>Reseña en Google</span></div>
+          </div>
+        </div>
+        <div class="t-card reveal reveal-delay-1">
+          <div class="t-stars">★★★★★</div>
+          <p class="quote">"Queremos agradecer especialmente a Ailén por su excelente atención y asesoramiento. Desde el primer momento nos acompañó con mucha paciencia, predisposición y profesionalismo."</p>
+          <div class="t-person">
+            <div class="t-avatar">AS</div>
+            <div><strong>Andrea S.</strong><span>Reseña en Google</span></div>
+          </div>
+        </div>
+        <div class="t-card reveal reveal-delay-2">
+          <div class="t-stars">★★★★★</div>
+          <p class="quote">"Cumplieron en tiempo y forma, muy amable Araceli y José. Los chicos del flete excelente predisposición. Muy amables todos."</p>
+          <div class="t-person">
+            <div class="t-avatar">CL</div>
+            <div><strong>Claudia L.</strong><span>Reseña en Google</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="t-note">★ <a href="https://maps.google.com/?cid=6576605301294909939" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Ver todas las reseñas en Google</a></p>
+    </div>
+  </section>
+
+  <!-- ================= SHOWROOM ================= -->
+  <section class="showroom" id="showroom">
+    <div class="container showroom-grid">
+      <div class="reveal">
+        <div class="eyebrow">Showroom</div>
+        <h2>Vení a conocerlas</h2>
+        <p>En nuestro showroom de Balboa tenemos todos los muestrarios: podés ver y tocar las telas, y mirarlas a contraluz para elegir cuánta luz dejan pasar.</p>
+        <p class="addr">Balboa 371, La Paternal, CABA</p>
+        <p>Escribinos antes y te esperamos.</p>
+        <a class="btn btn-primary" href="https://wa.me/5491125420046?text=Hola!%20Quiero%20ir%20al%20showroom%20a%20ver%20las%20cortinas" target="_blank" rel="noopener">Coordinar visita por WhatsApp</a>
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Balboa+371,+CABA,+Argentina" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="map reveal reveal-delay-1">
+        <iframe src="https://www.google.com/maps?q=Balboa+371,+Ciudad+Aut%C3%B3noma+de+Buenos+Aires&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa del showroom de Balboa"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORMULARIO ================= -->
+  <section class="quote-form-section" id="cotizar">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Presupuesto sin cargo</div>
+        <h2>Pedí tu presupuesto</h2>
+        <p>Una ventana por bloque. Si querés cortinas para varias ventanas, agregalas abajo.</p>
+        <p class="promo">🎁 <span>Aprovechá la <strong>instalación incluida</strong> por tiempo limitado, hasta el 30/11.</span></p>
+      </div>
+
+      <form class="qf" id="quoteForm" novalidate>
+        <div id="qfWindows"></div>
+
+        <button type="button" class="btn qf-add" id="qfAdd">+ Agregar otra ventana</button>
+
+        <div class="qf-contact">
+          <h3>Tus datos</h3>
+          <div class="qf-grid">
+            <div>
+              <label class="qf-label" for="qfNombre">Nombre</label>
+              <input type="text" id="qfNombre" name="nombre" autocomplete="name" maxlength="80" required>
+            </div>
+            <div>
+              <label class="qf-label" for="qfWhatsapp">WhatsApp</label>
+              <input type="tel" id="qfWhatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="11 2345 6789" maxlength="30" required>
+            </div>
+            <div class="qf-full">
+              <label class="qf-label" for="qfZona">Barrio o localidad</label>
+              <input type="text" id="qfZona" name="zona" autocomplete="address-level2" placeholder="Ej.: Palermo, Vicente López, Lanús" maxlength="80" required>
+            </div>
+            <div class="qf-full">
+              <label class="qf-label" for="qfFoto">Fotos de las ventanas <span class="qf-help">Opcional, hasta 6. Nos ayudan a ver el tipo de ventana y el ambiente.</span></label>
+              <input type="file" id="qfFoto" accept="image/jpeg,image/png,image/webp" multiple>
+              <div class="qf-photo-name" id="qfFotoNombre"></div>
+            </div>
+            <div class="qf-full">
+              <label class="qf-label" for="qfComentarios">Comentarios <span class="qf-help">Opcional.</span></label>
+              <textarea id="qfComentarios" name="comentarios" maxlength="1000"></textarea>
+            </div>
+          </div>
+          <div class="qf-hp" aria-hidden="true">
+            <label for="qfSitio">No completar</label>
+            <input type="text" id="qfSitio" name="sitio" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="qf-error" id="qfError" role="alert"></div>
+          <button type="submit" class="btn btn-primary qf-submit" id="qfSubmit">Pedir presupuesto</button>
+          <p class="qf-privacy">Usamos tus datos y tus fotos solo para responderte este pedido.</p>
+        </div>
+      </form>
+
+      <div class="qf-done" id="qfDone" role="status">
+        <h3>¡Listo, recibimos tu pedido!</h3>
+        <p>Nuestro equipo calcula el presupuesto con tus medidas y te escribe por WhatsApp.</p>
+        <a class="btn btn-outline" href="#top">Volver arriba</a>
+      </div>
+
+      <p class="wa-alt">¿Preferís hablar con alguien? <a href="https://wa.me/5491125420046?text=Hola!%20Quiero%20cotizar%20cortinas%20a%20medida" target="_blank" rel="noopener">Escribinos por WhatsApp al 11 2542-0046</a></p>
+    </div>
+  </section>
+
+</main>
+
+<template id="qfWindowTpl">
+  <fieldset class="qf-window">
+    <h3><span class="qf-title">Ventana 1</span> <button type="button" class="qf-remove">Quitar</button></h3>
+
+    <span class="qf-label">Tipo de cortina</span>
+    <div class="qf-types">
+      <label class="qf-type"><input type="radio" value="roller"><img src="img/roller.jpg" alt="" loading="lazy"><span>Roller</span></label>
+      <label class="qf-type"><input type="radio" value="tradicional"><img src="img/tradicional.jpg" alt="" loading="lazy"><span>Tradicional</span></label>
+      <label class="qf-type"><input type="radio" value="vertical"><img src="img/verticales.jpg" alt="" loading="lazy"><span>Bandas verticales</span></label>
+    </div>
+
+    <div class="qf-tela" hidden>
+      <span class="qf-label">Tela</span>
+      <div class="qf-chips"></div>
+      <p class="qf-tela-help"></p>
+    </div>
+
+    <div class="qf-measures">
+      <span class="qf-label">Medidas <span class="qf-help">Ancho: de lado a lado del hueco de la ventana. Alto: desde arriba del hueco hasta donde querés que llegue la cortina.</span></span>
+      <div class="qf-grid">
+        <div class="qf-unit"><input type="number" class="qf-ancho" inputmode="numeric" min="20" max="1500" placeholder="Ancho" aria-label="Ancho en centímetros"></div>
+        <div class="qf-unit"><input type="number" class="qf-alto" inputmode="numeric" min="20" max="600" placeholder="Alto" aria-label="Alto en centímetros"></div>
+      </div>
+    </div>
+    <label class="qf-check"><input type="checkbox" class="qf-medir"> No tengo las medidas, prefiero que vengan a medir</label>
+
+    <div class="qf-grid-3" style="margin-top:6px">
+      <div>
+        <label class="qf-label">Ambiente</label>
+        <select class="qf-ambiente">
+          <option>Living</option><option>Comedor</option><option>Dormitorio</option>
+          <option>Cocina</option><option>Oficina</option><option>Otro</option>
+        </select>
+      </div>
+      <div>
+        <label class="qf-label">Cantidad iguales</label>
+        <input type="number" class="qf-cantidad" inputmode="numeric" min="1" max="30" value="1">
+      </div>
+      <div>
+        <label class="qf-label">Color (opcional)</label>
+        <input type="text" class="qf-color" maxlength="60" placeholder="Ej.: blanco, gris">
+      </div>
+    </div>
+  </fieldset>
+</template>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="img/logo.png" alt="Geben Argentina" class="footer-logo-img">
+        <p>Cortinas a medida, sillones, muebles y decoración para el hogar.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491125420046" target="_blank" rel="noopener">WhatsApp: 11 2542-0046</a>
+        <a href="#cotizar">Pedir presupuesto</a>
+        <a href="#beneficios">Nuestras líneas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Geben</h4>
+        <a href="https://www.gebenargentina.com" target="_blank" rel="noopener">Tienda online</a>
+        <a href="#top">Inicio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Geben Argentina. Todos los derechos reservados.</span>
+      <span>Hecho con dedicación en Buenos Aires 🇦🇷</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491125420046?text=Hola!%20Quiero%20cotizar%20cortinas%20a%20medida" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.69.44 3.34 1.28 4.79L2.05 22l5.46-1.43a9.9 9.9 0 0 0 4.53 1.15h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.24.85.87-3.16-.2-.32a8.24 8.24 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.24 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.36-.77-1.86-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.58.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
+
+<script>
+  /* ===== Configuración del formulario ===== */
+  // URL de la aplicación web de Apps Script (termina en /exec).
+  const ENDPOINT = '';
+  // Conversión de Google Ads para el pedido de presupuesto (ej.: 'AW-781590286/AbCdEf'). Vacío = no se envía.
+  const GOOGLE_ADS_PEDIDO = '';
+
+  const TELAS = {
+    roller: { opciones: ['Screen', 'Blackout', 'Doble (screen + blackout)'],
+              ayuda: 'Screen deja pasar la luz y se ve hacia afuera. Blackout oscurece. Doble: las dos en la misma ventana.' },
+    tradicional: { opciones: ['Solo gasa', 'Gasa + blackout'],
+              ayuda: 'La gasa filtra la luz. Con blackout, además, oscurece.' },
+    vertical: { opciones: ['Screen', 'Blackout'],
+              ayuda: 'Screen deja pasar la luz y se ve hacia afuera. Blackout oscurece.' },
+  };
+
+  (function(){
+    const lista = document.getElementById('qfWindows');
+    const tpl = document.getElementById('qfWindowTpl');
+    const form = document.getElementById('quoteForm');
+    const errorBox = document.getElementById('qfError');
+    const submit = document.getElementById('qfSubmit');
+    let seq = 0;
+
+    function renumerar(){
+      const ventanas = lista.querySelectorAll('.qf-window');
+      ventanas.forEach((v, i) => {
+        v.querySelector('.qf-title').textContent = 'Ventana ' + (i + 1);
+        v.querySelector('.qf-remove').hidden = ventanas.length === 1;
+      });
+    }
+
+    function agregarVentana(){
+      const nodo = tpl.content.firstElementChild.cloneNode(true);
+      const id = ++seq;
+      nodo.querySelectorAll('.qf-type input').forEach(r => { r.name = 'tipo' + id; });
+      nodo.querySelector('.qf-types').addEventListener('change', e => elegirTipo(nodo, e.target.value, id));
+      nodo.querySelector('.qf-medir').addEventListener('change', e => {
+        nodo.querySelector('.qf-measures').classList.toggle('off', e.target.checked);
+        nodo.querySelectorAll('.qf-ancho, .qf-alto').forEach(i => { i.disabled = e.target.checked; });
+      });
+      nodo.querySelector('.qf-remove').addEventListener('click', () => { nodo.remove(); renumerar(); });
+      lista.appendChild(nodo);
+      renumerar();
+      return nodo;
+    }
+
+    function elegirTipo(nodo, tipo, id){
+      const caja = nodo.querySelector('.qf-tela');
+      const chips = caja.querySelector('.qf-chips');
+      chips.textContent = '';
+      TELAS[tipo].opciones.forEach(op => {
+        const l = document.createElement('label'); l.className = 'qf-chip';
+        const i = document.createElement('input'); i.type = 'radio'; i.name = 'tela' + id; i.value = op;
+        const s = document.createElement('span'); s.textContent = op;
+        l.append(i, s); chips.appendChild(l);
+      });
+      caja.querySelector('.qf-tela-help').textContent = TELAS[tipo].ayuda;
+      caja.hidden = false;
+    }
+
+    document.getElementById('qfAdd').addEventListener('click', () => {
+      const n = agregarVentana();
+      n.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+    agregarVentana();
+
+    // Fotos: se achican en el navegador antes de mandarlas.
+    const MAX_FOTOS = 6;
+    let fotos = [];
+    const fotoInput = document.getElementById('qfFoto');
+    fotoInput.addEventListener('change', async () => {
+      fotos = [];
+      const nombre = document.getElementById('qfFotoNombre');
+      nombre.textContent = '';
+      let archivos = [...fotoInput.files];
+      if (!archivos.length) return;
+      const avisos = [];
+      if (archivos.length > MAX_FOTOS){ avisos.push('Tomamos las primeras ' + MAX_FOTOS + ' fotos.'); archivos = archivos.slice(0, MAX_FOTOS); }
+      for (const f of archivos){
+        if (!/^image\/(jpeg|png|webp)$/.test(f.type)){ avisos.push(f.name + ': tiene que ser JPG, PNG o WEBP.'); continue; }
+        try { fotos.push(await achicar(f)); } catch(_) { avisos.push(f.name + ': no la pudimos leer.'); }
+      }
+      nombre.textContent = (fotos.length ? fotos.length + (fotos.length > 1 ? ' fotos listas. ' : ' foto lista. ') : '') + avisos.join(' ');
+    });
+
+    function achicar(file){
+      return new Promise((ok, mal) => {
+        const img = new Image();
+        img.onload = () => {
+          const max = 1600, k = Math.min(1, max / Math.max(img.width, img.height));
+          const c = document.createElement('canvas');
+          c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          URL.revokeObjectURL(img.src);
+          ok({ tipo: 'image/jpeg', datos: c.toDataURL('image/jpeg', 0.82).split(',')[1] });
+        };
+        img.onerror = mal;
+        img.src = URL.createObjectURL(file);
+      });
+    }
+
+    // De dónde vino la visita (para medir cada campaña).
+    const params = new URLSearchParams(location.search);
+    const origen = params.get('utm_source') || (params.get('fbclid') ? 'meta' : params.get('gclid') ? 'google' : 'directo');
+    const campana = params.get('utm_campaign') || '';
+
+    function mostrarError(msg, campo){
+      errorBox.textContent = msg; errorBox.classList.add('show');
+      if (campo){ campo.classList.add('qf-field-error'); campo.focus({ preventScroll:true }); campo.scrollIntoView({ behavior:'smooth', block:'center' }); }
+    }
+
+    form.addEventListener('input', e => e.target.classList && e.target.classList.remove('qf-field-error'));
+
+    function leer(){
+      form.querySelectorAll('.qf-field-error').forEach(el => el.classList.remove('qf-field-error'));
+      const ventanas = [];
+      const nodos = lista.querySelectorAll('.qf-window');
+      for (let i = 0; i < nodos.length; i++){
+        const v = nodos[i], n = 'Ventana ' + (i + 1) + ': ';
+        const tipo = v.querySelector('.qf-type input:checked');
+        if (!tipo) return mostrarError(n + 'elegí el tipo de cortina.', v.querySelector('.qf-types'));
+        const tela = v.querySelector('.qf-chip input:checked');
+        if (!tela) return mostrarError(n + 'elegí la tela.', v.querySelector('.qf-chips'));
+        const medir = v.querySelector('.qf-medir').checked;
+        const ancho = v.querySelector('.qf-ancho'), alto = v.querySelector('.qf-alto');
+        if (!medir){
+          const a = Number(ancho.value), h = Number(alto.value);
+          if (!(a >= 20 && a <= 1500)) return mostrarError(n + 'poné el ancho en centímetros (por ejemplo 160), o marcá que vengan a medir.', ancho);
+          if (!(h >= 20 && h <= 600)) return mostrarError(n + 'poné el alto en centímetros (por ejemplo 220), o marcá que vengan a medir.', alto);
+        }
+        const cant = v.querySelector('.qf-cantidad');
+        if (!(Number(cant.value) >= 1 && Number(cant.value) <= 30)) return mostrarError(n + 'revisá la cantidad.', cant);
+        ventanas.push({
+          tipo: tipo.value, tela: tela.value, medir,
+          ancho: medir ? null : Number(ancho.value), alto: medir ? null : Number(alto.value),
+          cantidad: Number(cant.value), ambiente: v.querySelector('.qf-ambiente').value,
+          color: v.querySelector('.qf-color').value.trim(),
+        });
+      }
+      const nombre = document.getElementById('qfNombre');
+      const wa = document.getElementById('qfWhatsapp');
+      const zona = document.getElementById('qfZona');
+      if (!nombre.value.trim()) return mostrarError('Falta tu nombre.', nombre);
+      if (wa.value.replace(/\D/g, '').length < 8) return mostrarError('Revisá el número de WhatsApp, con código de área.', wa);
+      if (!zona.value.trim()) return mostrarError('Falta el barrio o la localidad.', zona);
+      return {
+        nombre: nombre.value.trim(), whatsapp: wa.value.trim(), zona: zona.value.trim(),
+        comentarios: document.getElementById('qfComentarios').value.trim(),
+        sitio: document.getElementById('qfSitio').value,
+        ventanas, fotos, origen, campana,
+      };
+    }
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      errorBox.classList.remove('show');
+      const datos = leer();
+      if (!datos) return;
+      if (!ENDPOINT){ mostrarError('El formulario todavía no está conectado. Escribinos por WhatsApp al 11 2542-0046.'); return; }
+      submit.disabled = true; submit.textContent = 'Enviando…';
+      try {
+        // text/plain evita la consulta previa de CORS que Apps Script no responde.
+        const r = await fetch(ENDPOINT, { method:'POST', body: JSON.stringify(datos), headers: { 'Content-Type':'text/plain;charset=utf-8' } });
+        const res = await r.json();
+        if (!res.ok) throw new Error(res.error || 'No se pudo enviar.');
+        if (window.fbq) fbq('track', 'Lead', { content_name: 'Cortinas a medida' });
+        if (window.gtag){
+          gtag('event', 'generate_lead', { form: 'cortinas' });
+          if (GOOGLE_ADS_PEDIDO) gtag('event', 'conversion', { send_to: GOOGLE_ADS_PEDIDO });
+        }
+        form.hidden = true;
+        document.getElementById('qfDone').classList.add('show');
+        document.getElementById('cotizar').scrollIntoView({ behavior:'smooth', block:'start' });
+      } catch (err) {
+        mostrarError((err && err.message && err.message.length < 140 ? err.message : 'No se pudo enviar.') + ' Probá de nuevo o escribinos por WhatsApp al 11 2542-0046.');
+      } finally {
+        submit.disabled = false; submit.textContent = 'Pedir presupuesto';
+      }
+    });
+  })();
+</script>
+
+<script>
+
+  // Header shadow on scroll
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive: true });
+
+  // Scroll reveal animations
+  const revealEls = document.querySelectorAll('.reveal:not(.in)');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  // Hero carousel: arrows, dots, scroll sync
+  (function(){
+    const track = document.getElementById('carouselTrack');
+    if(!track) return;
+    const prev = document.getElementById('carouselPrev');
+    const next = document.getElementById('carouselNext');
+    const dots = Array.from(document.querySelectorAll('#carouselDots .dot'));
+    const slideCount = track.children.length;
+    let current = 0;
+
+    function goTo(i){
+      current = (i + slideCount) % slideCount;
+      track.scrollTo({ left: track.clientWidth * current, behavior: 'smooth' });
+    }
+    prev.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(parseInt(d.dataset.i, 10))));
+
+    let scrollTimeout;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const i = Math.round(track.scrollLeft / track.clientWidth);
+        current = i;
+        dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      }, 80);
+    }, { passive: true });
+
+    // Auto-advance every 5s, pause on hover/touch
+    let autoTimer = setInterval(() => goTo(current + 1), 5000);
+    track.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    track.addEventListener('mouseleave', () => { autoTimer = setInterval(() => goTo(current + 1), 5000); });
+  })();
+
+  // Smooth anchor scroll (fallback for older browsers)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e){
+      const id = this.getAttribute('href');
+      if(id.length > 1){
+        const target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      }
+    });
+  });
+
+</script>
+
+</body>
+</html>
