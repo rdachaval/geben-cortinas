@@ -631,7 +631,11 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
               <label class="qf-label" for="qfWhatsapp">WhatsApp</label>
               <input type="tel" id="qfWhatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="11 2345 6789" maxlength="30" required>
             </div>
-            <div class="qf-full">
+            <div>
+              <label class="qf-label" for="qfMail">Mail</label>
+              <input type="email" id="qfMail" name="mail" autocomplete="email" inputmode="email" placeholder="nombre@mail.com" maxlength="120" required>
+            </div>
+            <div>
               <label class="qf-label" for="qfZona">Barrio o localidad</label>
               <input type="text" id="qfZona" name="zona" autocomplete="address-level2" placeholder="Ej.: Palermo, Vicente López, Lanús" maxlength="80" required>
             </div>
@@ -645,13 +649,14 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
               <textarea id="qfComentarios" name="comentarios" maxlength="1000"></textarea>
             </div>
           </div>
+          <label class="qf-check"><input type="checkbox" id="qfNovedades"> Quiero recibir novedades y promociones de Geben por mail</label>
           <div class="qf-hp" aria-hidden="true">
             <label for="qfSitio">No completar</label>
             <input type="text" id="qfSitio" name="sitio" tabindex="-1" autocomplete="off">
           </div>
           <div class="qf-error" id="qfError" role="alert"></div>
           <button type="submit" class="btn btn-primary qf-submit" id="qfSubmit">Pedir presupuesto</button>
-          <p class="qf-privacy">Usamos tus datos y tus fotos solo para responderte este pedido.</p>
+          <p class="qf-privacy">Usamos tus datos y tus fotos para responderte este pedido. Solo te mandamos novedades si lo marcaste.</p>
         </div>
       </form>
 
@@ -886,12 +891,15 @@ gtag('js',new Date());gtag('config','G-BRJS5M1CET');gtag('config','AW-781590286'
       }
       const nombre = document.getElementById('qfNombre');
       const wa = document.getElementById('qfWhatsapp');
+      const mail = document.getElementById('qfMail');
       const zona = document.getElementById('qfZona');
       if (!nombre.value.trim()) return mostrarError('Falta tu nombre.', nombre);
       if (wa.value.replace(/\D/g, '').length < 8) return mostrarError('Revisá el número de WhatsApp, con código de área.', wa);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim())) return mostrarError('Revisá el mail.', mail);
       if (!zona.value.trim()) return mostrarError('Falta el barrio o la localidad.', zona);
       return {
-        nombre: nombre.value.trim(), whatsapp: wa.value.trim(), zona: zona.value.trim(),
+        nombre: nombre.value.trim(), whatsapp: wa.value.trim(), mail: mail.value.trim().toLowerCase(), zona: zona.value.trim(),
+        novedades: document.getElementById('qfNovedades').checked,
         comentarios: document.getElementById('qfComentarios').value.trim(),
         sitio: document.getElementById('qfSitio').value,
         ventanas, fotos, origen, campana,
